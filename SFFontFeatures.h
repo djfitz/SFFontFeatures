@@ -134,6 +134,56 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 	SFFontFeatureContextualAlternates
 };
 
+
+
+/*!
+    Like a boolean but with three states. Consider this a way to represent digital logic High-Z state.
+*/
+typedef NS_ENUM(NSUInteger, TriState)
+{
+    on,     // The feature is on.
+    off,    // The feature is off.
+    def     // Feature reverts to a default setting
+};
+
+
+/*!
+    A class to enable/disable features in the San Francisco font.
+*/
+@interface SFFontFeatureTraits : NSObject
+
+@property TriState straightSidedSixAndNine;
+@property TriState openFour;
+@property TriState highLegibility;
+@property TriState verticallyCenteredColon;
+@property TriState oneStoryA;
+@property TriState upperCaseSmallCapitals;
+@property TriState lowerCaseSmallCapitals;
+@property TriState contextualFractionalForms;
+@property TriState monospacedNumbers;
+@property TriState proportionallySpacedNumbers;
+@property TriState superiorPositions;
+@property TriState inferiorPositions;
+@property TriState contextualAlternatives;
+
++ (SFFontFeatureTraits*) traitsWithStraightSidedSixAndNineEnabled;
++ (SFFontFeatureTraits*) traitsWithOpenFourEnabled;
++ (SFFontFeatureTraits*) traitsWithHighLegibilityEnabled;
++ (SFFontFeatureTraits*) traitsWithVerticallyCenteredColonEnabled;
++ (SFFontFeatureTraits*) traitsWithOneStoryAEnabled;
++ (SFFontFeatureTraits*) traitsWithUpperCaseSmallCapitalsEnabled;
++ (SFFontFeatureTraits*) traitsWithLowerCaseSmallCapitalsEnabled;
++ (SFFontFeatureTraits*) traitsWithContextualFractionalFormsEnabled;
++ (SFFontFeatureTraits*) traitsWithMonospacedNumbersEnabled;
++ (SFFontFeatureTraits*) traitsWithProportionallySpacedNumbersEnabled;
++ (SFFontFeatureTraits*) traitsWithSuperiorPositionsEnabled;
++ (SFFontFeatureTraits*) traitsWithInferiorPositionsEnabled;
++ (SFFontFeatureTraits*) traitsWithContextualAlternativeEnabled;
+
++ (SFFontFeatureTraits*) traitsWithContextualAlternativeDisabled;
+
+@end
+
 // ============================================================================================================
 // UIFont - SFFontFeatures category extension
 // ============================================================================================================
@@ -185,6 +235,8 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 	@return	A new font that is based on this font that has the specified features.
 */
 - (UIFont*) fontWithFeatures:(NSDictionary*)features;
+
+- (UIFont*) fontWithTraits:(SFFontFeatureTraits*)traits;
 
 /*!
 	Conveniance method that creates a new font and adds the features to it.

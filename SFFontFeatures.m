@@ -24,6 +24,131 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import "SFFontFeatures.h"
 
+// =====
+@implementation SFFontFeatureTraits
+
+- (instancetype) init
+{
+
+    if( (self = [super init]) )
+    {
+        self.straightSidedSixAndNine = def;
+        self.openFour = def;
+        self.highLegibility = def;
+        self.verticallyCenteredColon = def;
+        self.oneStoryA = def;
+        self.upperCaseSmallCapitals = def;
+        self.lowerCaseSmallCapitals = def;
+        self.contextualFractionalForms = def;
+        self.monospacedNumbers = def;
+        self.proportionallySpacedNumbers = def;
+        self.superiorPositions = def;
+        self.inferiorPositions = def;
+        self.contextualAlternatives = def;
+    }
+
+    return self;
+}
+
++ (SFFontFeatureTraits*) traitsWithStraightSidedSixAndNineEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.straightSidedSixAndNine = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithOpenFourEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.openFour = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithHighLegibilityEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.highLegibility = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithVerticallyCenteredColonEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.verticallyCenteredColon = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithOneStoryAEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.oneStoryA = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithUpperCaseSmallCapitalsEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.upperCaseSmallCapitals = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithLowerCaseSmallCapitalsEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.lowerCaseSmallCapitals = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithContextualFractionalFormsEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.contextualFractionalForms = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithMonospacedNumbersEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.monospacedNumbers = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithProportionallySpacedNumbersEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.proportionallySpacedNumbers = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithSuperiorPositionsEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.superiorPositions = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithInferiorPositionsEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.inferiorPositions = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithContextualAlternativeEnabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.contextualAlternatives = on;
+    return retVal;
+}
+
++ (SFFontFeatureTraits*) traitsWithContextualAlternativeDisabled
+{
+    SFFontFeatureTraits* retVal = [SFFontFeatureTraits new];
+    retVal.contextualAlternatives = off;
+    return retVal;
+}
+
+@end
 
 // =================================================
 // UIFont - SFFontFeatures category extension
@@ -37,6 +162,73 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	UIFont* newSystemFont = [UIFont systemFontOfSize:pointSize weight:weight];
 
 	return [newSystemFont fontWithFeatures:features];
+}
+
+- (UIFont*) fontWithTraits:(SFFontFeatureTraits*)traits
+{
+	NSDictionary* featureAttribute = @{ UIFontDescriptorFeatureSettingsAttribute : [UIFont fontFeatureListWithTraits:traits] };
+
+	return [UIFont fontWithDescriptor:[self.fontDescriptor fontDescriptorByAddingAttributes:featureAttribute] size:self.pointSize];
+}
+
+// * fontFeatureListWithFeatureSpecs
++ (NSArray*) fontFeatureListWithTraits:(SFFontFeatureTraits*)traits
+{
+	NSMutableArray *retVal = [NSMutableArray new];
+
+    NSDictionary* nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureStraightSidedSixAndNine enabledT:traits.straightSidedSixAndNine];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureOpenFour enabledT:traits.openFour];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureHighLegibility enabledT:traits.highLegibility];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureVerticallyCenteredColon enabledT:traits.verticallyCenteredColon];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureOneStoreyA enabledT:traits.oneStoryA];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureUpperCaseSmallCapitals enabledT:traits.upperCaseSmallCapitals];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureLowerCaseSmallCapitals enabledT:traits.lowerCaseSmallCapitals];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureContextualFractionalForms enabledT:traits.contextualFractionalForms];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureMonospacedNumbers enabledT:traits.monospacedNumbers];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureProportionalSpacedNumbers enabledT:traits.proportionallySpacedNumbers];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureSuperiorVerticalPosition enabledT:traits.superiorPositions];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureInferiorVerticalPosition enabledT:traits.inferiorPositions];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+    nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:SFFontFeatureContextualAlternates enabledT:traits.contextualAlternatives];
+    if( nextFeatureDict )
+		[retVal addObject:nextFeatureDict];
+
+	return retVal.copy;
 }
 
 // * fontWithFeatures
@@ -55,7 +247,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	for( NSNumber* nextFeatureKey in featureDictionary.allKeys )
 	{
 		BOOL featureEnabled = ((NSNumber*)featureDictionary[nextFeatureKey]).boolValue;
-		NSDictionary* nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:nextFeatureKey.integerValue enabled:featureEnabled];
+        
+		NSDictionary* nextFeatureDict = [UIFont fontFeatureSpecDictionaryForFeature:[nextFeatureKey integerValue] enabled:featureEnabled];
 		[retVal addObject:nextFeatureDict];
 	}
 
@@ -65,112 +258,157 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 // * fontFeatureDictionaryForFeature
 + (NSDictionary*) fontFeatureSpecDictionaryForFeature:(SFFontFeatureType)feature enabled:(BOOL)enabled
 {
+    return [UIFont fontFeatureSpecDictionaryForFeature:feature enabledT:enabled ? on : off];
+}
+
++ (NSDictionary*) fontFeatureSpecDictionaryForFeature:(SFFontFeatureType)feature enabledT:(TriState)featureTristate
+{
 	NSDictionary *retVal = nil;
 
 	switch( feature )
 	{
 		case SFFontFeatureStraightSidedSixAndNine:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kStylisticAltOneOnSelector) : @(kStylisticAltOneOffSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltOneOnSelector) : @(kStylisticAltOneOffSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureOpenFour:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kStylisticAltTwoOnSelector) : @(kStylisticAltTwoOffSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltTwoOnSelector) : @(kStylisticAltTwoOffSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureVerticallyCenteredColon:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kStylisticAltThreeOnSelector) : @(kStylisticAltThreeOffSelector)
-				};
+        {
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltThreeOnSelector) : @(kStylisticAltThreeOffSelector)
+                    };
+            }
 			break;
-
+        }
 		case SFFontFeatureHighLegibility:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kStylisticAltSixOnSelector) : @(kStylisticAltSixOffSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSixOnSelector) : @(kStylisticAltSixOffSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureOneStoreyA:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kStylisticAltSevenOnSelector) : @(kStylisticAltSevenOffSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSevenOnSelector) : @(kStylisticAltSevenOffSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureUpperCaseSmallCapitals:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kUpperCaseType),
-					UIFontFeatureSelectorIdentifierKey : @(kUpperCaseSmallCapsSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kUpperCaseType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kUpperCaseSmallCapsSelector) : @(kDefaultUpperCaseSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureLowerCaseSmallCapitals:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kLowerCaseType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kLowerCaseSmallCapsSelector) : @(kDefaultLowerCaseSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kLowerCaseType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kLowerCaseSmallCapsSelector) : @(kDefaultLowerCaseSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureContextualFractionalForms:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kFractionsType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kDiagonalFractionsSelector) : @(kNoFractionsSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kFractionsType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kDiagonalFractionsSelector) : @(kNoFractionsSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureMonospacedNumbers:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kMonospacedNumbersSelector) : @(kProportionalNumbersSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kMonospacedNumbersSelector) : @(kProportionalNumbersSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureProportionalSpacedNumbers:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kProportionalNumbersSelector) : @(kMonospacedNumbersSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kProportionalNumbersSelector) : @(kMonospacedNumbersSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureSuperiorVerticalPosition:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kSuperiorsSelector) : @(kNormalPositionSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kSuperiorsSelector) : @(kNormalPositionSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureInferiorVerticalPosition:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kInferiorsSelector) : @(kNormalPositionSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kInferiorsSelector) : @(kNormalPositionSelector)
+                    };
+            }
 			break;
 
 		case SFFontFeatureContextualAlternates:
-			retVal =
-				@{
-					UIFontFeatureTypeIdentifierKey     : @(kContextualAlternatesType),
-					UIFontFeatureSelectorIdentifierKey : enabled ? @(kContextualAlternatesOnSelector) : @(kContextualAlternatesOffSelector)
-				};
+            if( featureTristate != def )
+            {
+                retVal =
+                    @{
+                        UIFontFeatureTypeIdentifierKey     : @(kContextualAlternatesType),
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kContextualAlternatesOnSelector) : @(kContextualAlternatesOffSelector)
+                    };
+            }
 			break;
 	}
 
