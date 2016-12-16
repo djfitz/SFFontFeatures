@@ -224,13 +224,19 @@ typedef NS_ENUM(NSUInteger, TriState)
 	Creates a new font object by adding SF font features to the reciever font.
 
 	@param features		A dictionary that describes the features to enable or disable.
-	Dictionary items are of the form:
-	Key = @(feature)
-	Value = @(YES/NO) to enable or disable that feature
+                        Dictionary items are of the form:
+                        Key = @(feature)
+                        Value = @(YES/NO) to enable or disable that feature
 
 	Example:
 	UIFont* someFont = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
 	UIFont* fontWithFeatures = [someFont fontWithFeatures:@{ @(SFFontFeatureVerticallyCenteredColon) : @(YES) }];
+    UIDictionary* featureDict =
+        @{
+            @(SFFontFeatureVerticallyCenteredColon) : @(YES),
+            @(SFFontFeatureOpenFour) : @(YES)
+        };
+    UIFont* font2 = [someFont fontWithFeatures:featureDict];
 
 	@return	A new font that is based on this font that has the specified features.
 */
