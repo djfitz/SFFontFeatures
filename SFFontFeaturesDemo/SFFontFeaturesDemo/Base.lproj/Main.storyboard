@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MOv-4m-Rce">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SF Font Features-->
+        <scene sceneID="sg9-jW-gLu">
+            <objects>
+                <tableViewController title="SF Font Features" id="87p-Hz-BZI" customClass="SFFontFeaturesTableViewController" customModule="SFFontFeaturesDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="88" sectionHeaderHeight="18" sectionFooterHeight="18" id="o7M-5i-NOE">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="oK3-oo-sQe">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="https://github.com/djfitz/SFFontFeatures" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-dP-wVq">
+                                    <rect key="frame" x="8" y="8" width="398" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeatureTableCellID" id="5kK-xY-idb" customClass="FeatureTableViewCell" customModule="SFFontFeaturesDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="88"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5kK-xY-idb" id="jUp-EU-x38">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="270" verticalCompressionResistancePriority="770" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UW6-i4-Mfe" userLabel="Description Label">
+                                            <rect key="frame" x="8" y="8.0000000000000018" width="398" height="23.666666666666671"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="270" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="770" text="Regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-Pb-15o" userLabel="Regular Heading">
+                                            <rect key="frame" x="8" y="39.666666666666657" width="58" height="20.333333333333336"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="270" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="770" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gt4-Pa-hBk" userLabel="Regular Text Label">
+                                            <rect key="frame" x="71" y="39.666666666666657" width="335" height="20.333333333333336"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="270" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="770" text="Feature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-Vm-Lep" userLabel="Feature Heading">
+                                            <rect key="frame" x="8" y="65.333333333333329" width="58" height="20.333333333333343"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="270" verticalCompressionResistancePriority="770" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPb-cO-3Mv" userLabel="Feature Applied Label">
+                                            <rect key="frame" x="71" y="65.333333333333329" width="335" height="20.333333333333343"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gt4-Pa-hBk" firstAttribute="leading" secondItem="kPI-Pb-15o" secondAttribute="trailing" constant="5" id="8oY-kc-M4B"/>
+                                        <constraint firstItem="gt4-Pa-hBk" firstAttribute="bottom" secondItem="kPI-Pb-15o" secondAttribute="bottom" id="9Zi-UY-mUx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="UW6-i4-Mfe" secondAttribute="trailing" id="ANN-Lw-LJe"/>
+                                        <constraint firstAttribute="bottom" secondItem="DLz-Vm-Lep" secondAttribute="bottom" constant="2" id="Apu-CD-R01"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="UW6-i4-Mfe" secondAttribute="leading" id="CRK-zE-exc"/>
+                                        <constraint firstItem="kPI-Pb-15o" firstAttribute="top" secondItem="UW6-i4-Mfe" secondAttribute="bottom" constant="8" id="GBX-ed-09b"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FPb-cO-3Mv" secondAttribute="trailing" id="Qch-ln-07Z"/>
+                                        <constraint firstItem="FPb-cO-3Mv" firstAttribute="leading" secondItem="DLz-Vm-Lep" secondAttribute="trailing" constant="5" id="WE7-3h-oGY"/>
+                                        <constraint firstItem="gt4-Pa-hBk" firstAttribute="top" secondItem="kPI-Pb-15o" secondAttribute="top" id="cRo-ET-c0e"/>
+                                        <constraint firstItem="FPb-cO-3Mv" firstAttribute="top" secondItem="DLz-Vm-Lep" secondAttribute="top" id="fLC-J5-t9t"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gt4-Pa-hBk" secondAttribute="trailing" id="fZJ-eB-zQ1"/>
+                                        <constraint firstAttribute="topMargin" secondItem="UW6-i4-Mfe" secondAttribute="top" id="jxf-qh-YNb"/>
+                                        <constraint firstItem="FPb-cO-3Mv" firstAttribute="bottom" secondItem="DLz-Vm-Lep" secondAttribute="bottom" id="q0h-Zx-SUW"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="kPI-Pb-15o" secondAttribute="leading" id="rWE-ta-dst"/>
+                                        <constraint firstItem="DLz-Vm-Lep" firstAttribute="leading" secondItem="jUp-EU-x38" secondAttribute="leadingMargin" id="rxg-6V-P60"/>
+                                        <constraint firstItem="DLz-Vm-Lep" firstAttribute="top" secondItem="kPI-Pb-15o" secondAttribute="bottom" constant="5" id="uLX-eB-s9d"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descLabel" destination="UW6-i4-Mfe" id="JmN-BM-sBV"/>
+                                    <outlet property="featuredLabel" destination="FPb-cO-3Mv" id="hwy-TK-FNI"/>
+                                    <outlet property="regularLabel" destination="gt4-Pa-hBk" id="vcI-zO-PP1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="87p-Hz-BZI" id="bgA-LU-WsG"/>
+                            <outlet property="delegate" destination="87p-Hz-BZI" id="Shh-Am-pd2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="San Francisco Font Features" id="j20-fQ-kzP"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNJ-Pr-uwx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2330.434782608696" y="-182.60869565217394"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ePB-xi-BlG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MOv-4m-Rce" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vd6-hb-LBa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="87p-Hz-BZI" kind="relationship" relationship="rootViewController" id="H1e-XB-1c9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s6c-QJ-sB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.6376811594205" y="-182.60869565217394"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F659C0B31DFA6ECB00A769AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0B21DFA6ECB00A769AD /* AppDelegate.swift */; };
+		F659C0B51DFA6ECB00A769AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0B41DFA6ECB00A769AD /* ViewController.swift */; };
+		F659C0B81DFA6ECB00A769AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659C0B61DFA6ECB00A769AD /* Main.storyboard */; };
+		F659C0BA1DFA6ECB00A769AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F659C0B91DFA6ECB00A769AD /* Assets.xcassets */; };
+		F659C0BD1DFA6ECB00A769AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659C0BB1DFA6ECB00A769AD /* LaunchScreen.storyboard */; };
+		F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */; };
+		F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */; };
+		F6EDF8FC1E04AAA700664756 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EDF8FB1E04AAA700664756 /* SFFontFeatures.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F659C0AF1DFA6ECB00A769AD /* SFFontFeaturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFFontFeaturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F659C0B21DFA6ECB00A769AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F659C0B41DFA6ECB00A769AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F659C0B71DFA6ECB00A769AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F659C0B91DFA6ECB00A769AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F659C0BC1DFA6ECB00A769AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F659C0BE1DFA6ECB00A769AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
+		F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFontFeaturesTableViewController.swift; sourceTree = "<group>"; };
+		F659C0C81DFA750800A769AD /* SFFontFeaturesDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFFontFeaturesDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6EDF8FA1E04AAA700664756 /* SFFontFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFFontFeatures.h; path = ../../SFFontFeatures.h; sourceTree = "<group>"; };
+		F6EDF8FB1E04AAA700664756 /* SFFontFeatures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFFontFeatures.m; path = ../../SFFontFeatures.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F659C0AC1DFA6ECB00A769AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F659C0A61DFA6ECB00A769AD = {
+			isa = PBXGroup;
+			children = (
+				F6EDF8FD1E04AAAE00664756 /* SFFontFeaturesLib */,
+				F659C0B11DFA6ECB00A769AD /* SFFontFeaturesDemo */,
+				F6EDF8FE1E04AACB00664756 /* Supporting Files */,
+				F659C0B01DFA6ECB00A769AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F659C0B01DFA6ECB00A769AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F659C0AF1DFA6ECB00A769AD /* SFFontFeaturesDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F659C0B11DFA6ECB00A769AD /* SFFontFeaturesDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F659C0B21DFA6ECB00A769AD /* AppDelegate.swift */,
+				F659C0B41DFA6ECB00A769AD /* ViewController.swift */,
+				F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */,
+				F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */,
+				F659C0C81DFA750800A769AD /* SFFontFeaturesDemo-Bridging-Header.h */,
+			);
+			path = SFFontFeaturesDemo;
+			sourceTree = "<group>";
+		};
+		F6EDF8FD1E04AAAE00664756 /* SFFontFeaturesLib */ = {
+			isa = PBXGroup;
+			children = (
+				F6EDF8FA1E04AAA700664756 /* SFFontFeatures.h */,
+				F6EDF8FB1E04AAA700664756 /* SFFontFeatures.m */,
+			);
+			name = SFFontFeaturesLib;
+			path = SFFontFeaturesDemo;
+			sourceTree = "<group>";
+		};
+		F6EDF8FE1E04AACB00664756 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F659C0B61DFA6ECB00A769AD /* Main.storyboard */,
+				F659C0BB1DFA6ECB00A769AD /* LaunchScreen.storyboard */,
+				F659C0BE1DFA6ECB00A769AD /* Info.plist */,
+				F659C0B91DFA6ECB00A769AD /* Assets.xcassets */,
+			);
+			name = "Supporting Files";
+			path = SFFontFeaturesDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F659C0AE1DFA6ECB00A769AD /* SFFontFeaturesDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F659C0C11DFA6ECB00A769AD /* Build configuration list for PBXNativeTarget "SFFontFeaturesDemo" */;
+			buildPhases = (
+				F659C0AB1DFA6ECB00A769AD /* Sources */,
+				F659C0AC1DFA6ECB00A769AD /* Frameworks */,
+				F659C0AD1DFA6ECB00A769AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SFFontFeaturesDemo;
+			productName = SFFontFeaturesDemo;
+			productReference = F659C0AF1DFA6ECB00A769AD /* SFFontFeaturesDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F659C0A71DFA6ECB00A769AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = doughill;
+				TargetAttributes = {
+					F659C0AE1DFA6ECB00A769AD = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F659C0AA1DFA6ECB00A769AD /* Build configuration list for PBXProject "SFFontFeaturesDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F659C0A61DFA6ECB00A769AD;
+			productRefGroup = F659C0B01DFA6ECB00A769AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F659C0AE1DFA6ECB00A769AD /* SFFontFeaturesDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F659C0AD1DFA6ECB00A769AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F659C0BD1DFA6ECB00A769AD /* LaunchScreen.storyboard in Resources */,
+				F659C0BA1DFA6ECB00A769AD /* Assets.xcassets in Resources */,
+				F659C0B81DFA6ECB00A769AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F659C0AB1DFA6ECB00A769AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */,
+				F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */,
+				F6EDF8FC1E04AAA700664756 /* SFFontFeatures.m in Sources */,
+				F659C0B51DFA6ECB00A769AD /* ViewController.swift in Sources */,
+				F659C0B31DFA6ECB00A769AD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F659C0B61DFA6ECB00A769AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F659C0B71DFA6ECB00A769AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F659C0BB1DFA6ECB00A769AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F659C0BC1DFA6ECB00A769AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F659C0BF1DFA6ECB00A769AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F659C0C01DFA6ECB00A769AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F659C0C21DFA6ECB00A769AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SFFontFeaturesDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doughill.SFFontFeaturesDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SFFontFeaturesDemo/SFFontFeaturesDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F659C0C31DFA6ECB00A769AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = SFFontFeaturesDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.doughill.SFFontFeaturesDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SFFontFeaturesDemo/SFFontFeaturesDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F659C0AA1DFA6ECB00A769AD /* Build configuration list for PBXProject "SFFontFeaturesDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F659C0BF1DFA6ECB00A769AD /* Debug */,
+				F659C0C01DFA6ECB00A769AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F659C0C11DFA6ECB00A769AD /* Build configuration list for PBXNativeTarget "SFFontFeaturesDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F659C0C21DFA6ECB00A769AD /* Debug */,
+				F659C0C31DFA6ECB00A769AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F659C0A71DFA6ECB00A769AD /* Project object */;
+}
