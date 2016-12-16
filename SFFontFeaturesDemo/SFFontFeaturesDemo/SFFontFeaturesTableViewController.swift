@@ -71,7 +71,6 @@ class SFFontFeaturesTableViewController: UITableViewController {
 
             case 3:
                 cell.descLabel.text     = "Vertically Centered Colon"
-
                 cell.regularLabel.text  = ":21"
 
                 let regTraits = SFFontFeatureTraits()

@@ -268,6 +268,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	switch( feature )
 	{
 		case SFFontFeatureStraightSidedSixAndNine:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -276,9 +277,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltOneOnSelector) : @(kStylisticAltOneOffSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureOpenFour:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -287,7 +290,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltTwoOnSelector) : @(kStylisticAltTwoOffSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureVerticallyCenteredColon:
         {
@@ -299,9 +303,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltThreeOnSelector) : @(kStylisticAltThreeOffSelector)
                     };
             }
-			break;
         }
+        break;
+
 		case SFFontFeatureHighLegibility:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -310,9 +316,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSixOnSelector) : @(kStylisticAltSixOffSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureOneStoreyA:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -321,9 +329,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSevenOnSelector) : @(kStylisticAltSevenOffSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureUpperCaseSmallCapitals:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -332,9 +342,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kUpperCaseSmallCapsSelector) : @(kDefaultUpperCaseSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureLowerCaseSmallCapitals:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -343,9 +355,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kLowerCaseSmallCapsSelector) : @(kDefaultLowerCaseSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureContextualFractionalForms:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -354,9 +368,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kDiagonalFractionsSelector) : @(kNoFractionsSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureMonospacedNumbers:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -365,9 +381,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kMonospacedNumbersSelector) : @(kProportionalNumbersSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureProportionalSpacedNumbers:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -376,9 +394,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kProportionalNumbersSelector) : @(kMonospacedNumbersSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureSuperiorVerticalPosition:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -387,9 +407,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kSuperiorsSelector) : @(kNormalPositionSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureInferiorVerticalPosition:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -398,9 +420,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kInferiorsSelector) : @(kNormalPositionSelector)
                     };
             }
-			break;
+        }
+        break;
 
 		case SFFontFeatureContextualAlternates:
+        {
             if( featureTristate != def )
             {
                 retVal =
@@ -409,7 +433,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kContextualAlternatesOnSelector) : @(kContextualAlternatesOffSelector)
                     };
             }
-			break;
+        }
+        break;
 	}
 
 	return retVal;
