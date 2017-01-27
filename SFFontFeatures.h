@@ -137,7 +137,7 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 
 
 /*!
-    Like a boolean but with three states. Consider this a way to represent digital logic High-Z state.
+    Like a boolean but with three states. Consider this a way to represent a Null (no-op).
 */
 typedef NS_ENUM(NSUInteger, TriState)
 {
@@ -228,21 +228,63 @@ typedef NS_ENUM(NSUInteger, TriState)
                         Key = @(feature)
                         Value = @(YES/NO) to enable or disable that feature
 
-	Example:
-	UIFont* someFont = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
-	UIFont* fontWithFeatures = [someFont fontWithFeatures:@{ @(SFFontFeatureVerticallyCenteredColon) : @(YES) }];
-    UIDictionary* featureDict =
-        @{
-            @(SFFontFeatureVerticallyCenteredColon) : @(YES),
-            @(SFFontFeatureOpenFour) : @(YES)
-        };
-    UIFont* font2 = [someFont fontWithFeatures:featureDict];
-
 	@return	A new font that is based on this font that has the specified features.
+
+	Example:
+
+        SFFontFeatureTraits *traits;
+
+        traits.straightSidedSixAndNine = on;
+
+        UIFont *sfFont = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
+
+        sfFont = [sfFont fontWithTraits:traits];
+
+    or
+
+        SFFontFeatureTraits *traits = [SFFontFeatureTraits traitsWithHighLegibilityEnabled];
+
+        UIFont *sfFont = [sfFont fontWithTraits:traits];
 */
 - (UIFont*) fontWithFeatures:(NSDictionary*)features;
 
-- (UIFont*) fontWithTraits:(SFFontFeatureTraits*)traits;
+/*!
+	Creates a new font object by adding SF font features to the reciever font.
+
+	@param traits		A traits object that describes the features to enable or disable.
+                        @seealso SFFontFeatureTraits @/seealso
+
+	Example:
+
+        UIFont *sfFont = [UIFont systemFontOfSize:12 weight:UIFontWeightRegular];
+
+        SFFontFeatureTraits *traits;
+
+        traits.straightSidedSixAndNine = on;
+
+        sfFont = [sfFont fontWithTraits:traits];
+
+    or
+
+        SFFontFeatureTraits *traits = [SFFontFeatureTraits traitsWithHighLegibilityEnabled];
+
+        UIFont *sfFont = [sfFont fontWithTraits:traits];
+
+    Swift
+
+        let traits : SFFontFeatureTraits = SFFontFeatureTraits.init()
+
+        traits.straightSidedSixAndNine = TriState.on
+
+        let sfFont = UIFont.systemFont(ofSize: 12, weight: UIFontWeightRegular).withTraits(traits)
+
+or
+
+        let ssfFont = UIFont.systemFont(ofSize: 12, weight: UIFontWeightRegular).withTraits(SFFontFeatureTraits.withHighLegibilityEnabled())
+
+	@return	A new font that is based on this font that has the specified features.
+*/
+- (UIFont*) fontWithTraits:(SFFontFeatureTraits*) traits;
 
 /*!
 	Conveniance method that creates a new font and adds the features to it.

@@ -29,7 +29,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 - (instancetype) init
 {
-
     if( (self = [super init]) )
     {
         self.straightSidedSixAndNine = def;
@@ -265,178 +264,154 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 {
 	NSDictionary *retVal = nil;
 
-	switch( feature )
-	{
-		case SFFontFeatureStraightSidedSixAndNine:
+    if( featureTristate != def )
+    {
+        switch( feature )
         {
-            if( featureTristate != def )
+            case SFFontFeatureStraightSidedSixAndNine:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltOneOnSelector) : @(kStylisticAltOneOffSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltOneOnSelector) :
+                                                                                     @(kStylisticAltOneOffSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureOpenFour:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureOpenFour:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltTwoOnSelector) : @(kStylisticAltTwoOffSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltTwoOnSelector) :
+                                                                                     @(kStylisticAltTwoOffSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureVerticallyCenteredColon:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureVerticallyCenteredColon:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltThreeOnSelector) : @(kStylisticAltThreeOffSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltThreeOnSelector) :
+                                                                                     @(kStylisticAltThreeOffSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureHighLegibility:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureHighLegibility:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSixOnSelector) : @(kStylisticAltSixOffSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSixOnSelector) :
+                                                                                     @(kStylisticAltSixOffSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureOneStoreyA:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureOneStoreyA:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kStylisticAlternativesType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSevenOnSelector) : @(kStylisticAltSevenOffSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kStylisticAltSevenOnSelector) :
+                                                                                     @(kStylisticAltSevenOffSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureUpperCaseSmallCapitals:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureUpperCaseSmallCapitals:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kUpperCaseType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kUpperCaseSmallCapsSelector) : @(kDefaultUpperCaseSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kUpperCaseSmallCapsSelector) :
+                                                                                     @(kDefaultUpperCaseSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureLowerCaseSmallCapitals:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureLowerCaseSmallCapitals:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kLowerCaseType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kLowerCaseSmallCapsSelector) : @(kDefaultLowerCaseSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kLowerCaseSmallCapsSelector) :
+                                                                                     @(kDefaultLowerCaseSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureContextualFractionalForms:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureContextualFractionalForms:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kFractionsType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kDiagonalFractionsSelector) : @(kNoFractionsSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kDiagonalFractionsSelector) :
+                                                                                     @(kNoFractionsSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureMonospacedNumbers:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureMonospacedNumbers:
             {
-                retVal =
-                    @{
-                        UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kMonospacedNumbersSelector) : @(kProportionalNumbersSelector)
-                    };
+                    retVal =
+                        @{
+                            UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
+                            UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kMonospacedNumbersSelector) :
+                                                                                         @(kProportionalNumbersSelector)
+                        };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureProportionalSpacedNumbers:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureProportionalSpacedNumbers:
             {
-                retVal =
-                    @{
-                        UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kProportionalNumbersSelector) : @(kMonospacedNumbersSelector)
-                    };
+                    retVal =
+                        @{
+                            UIFontFeatureTypeIdentifierKey     : @(kNumberSpacingType),
+                            UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kProportionalNumbersSelector) :
+                                                                                         @(kMonospacedNumbersSelector)
+                        };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureSuperiorVerticalPosition:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureSuperiorVerticalPosition:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kSuperiorsSelector) : @(kNormalPositionSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kSuperiorsSelector) :
+                                                                                     @(kNormalPositionSelector)
                     };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureInferiorVerticalPosition:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureInferiorVerticalPosition:
             {
-                retVal =
-                    @{
-                        UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kInferiorsSelector) : @(kNormalPositionSelector)
-                    };
+                    retVal =
+                        @{
+                            UIFontFeatureTypeIdentifierKey     : @(kVerticalPositionType),
+                            UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kInferiorsSelector) :
+                                                                                         @(kNormalPositionSelector)
+                        };
             }
-        }
-        break;
+            break;
 
-		case SFFontFeatureContextualAlternates:
-        {
-            if( featureTristate != def )
+            case SFFontFeatureContextualAlternates:
             {
                 retVal =
                     @{
                         UIFontFeatureTypeIdentifierKey     : @(kContextualAlternatesType),
-                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kContextualAlternatesOnSelector) : @(kContextualAlternatesOffSelector)
+                        UIFontFeatureSelectorIdentifierKey : featureTristate == on ? @(kContextualAlternatesOnSelector) :
+                                                                                     @(kContextualAlternatesOffSelector)
                     };
             }
+            break;
         }
-        break;
-	}
-
+    }
 	return retVal;
 }
 
