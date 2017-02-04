@@ -31,10 +31,10 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 	/*!
 		Alternate glyph forms of the six and nine characters that have a straight side.
 
-		These glyph variant forms are easier to distinguish from each other and an eight at smaller
+		These glyph variant forms are easier to distinguish from each other at eight or smaller
 		point sizes. There are also stylistic differences that might be desirable.
 	*/
-    SFFontFeatureStraightSidedSixAndNine,
+    	SFFontFeatureStraightSidedSixAndNine,
 
 	/*!
 		Alternate glyph form of the four character that has an open top.
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 		This glyph variant form is easier to distinguish from other glyphs at smaller
 		point sizes. There are also stylistic differences that might be desirable.
 	*/
-    SFFontFeatureOpenFour,
+    	SFFontFeatureOpenFour,
 
 	/*!
 		Turns on a collection of font features that create higher legibility, especially at smaller point sizes.
@@ -52,9 +52,9 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 		• Turns on Open Four
 		• Uses alternate lower-case 'l' glyph with a serif/swoosh.
 		• Tracking and Kerning is changed.
-		• possibly others.
+		• Possibly others.
 	*/
-    SFFontFeatureHighLegibility,
+    	SFFontFeatureHighLegibility,
 
 	/*!
 		Centers the colon ':' glyph on the line with capital letter glyphs, rather than sitting on the baseline.
@@ -64,7 +64,7 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 		character stream has <numeric digits>:<numeric digits>. If your character stream is not of this form,
 		e.g. a:1, you will need to turn this on manually.
 	*/
-    SFFontFeatureVerticallyCenteredColon,
+    	SFFontFeatureVerticallyCenteredColon,
 
 	/*!
 		Alternate form of the lower-case a that is an oval with a straight bar on the right side.
@@ -98,7 +98,7 @@ typedef NS_ENUM(NSUInteger, SFFontFeatureType)
 		• Numerator is superscripted.
 		• Slash character is changed to the special unicode fraction /.
 		• The second set of numeric digits (e.g. denominator) is changed to a smaller size, as the numerator above.
-		• Denominator is possibly subscripted.
+		• Denominator is subscripted.
 		• Numerator and denominator fit neatly above and below the fraction / character glyph.
 	*/
 	SFFontFeatureContextualFractionalForms,
