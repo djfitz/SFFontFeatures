@@ -5,7 +5,7 @@ A convenience extension to UIFont for enabling features specific to the San Fran
 See here for more info about the San Francisco Font:
 https://developer.apple.com/fonts/
 
-![](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.pdf?raw=true)
+![](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.png?raw=true)
 
 Many of the features of the San Francisco font are enabled by odd OpenType settings (e.g. Alternate Stylistic Features)
 which aren't named in the SDK headers. This class extension abstracts the specifics to enable these features.
