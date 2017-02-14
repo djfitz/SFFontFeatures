@@ -28,9 +28,9 @@ which aren't named in the SDK headers. This class extension abstracts the specif
 Due to the above limitations/restrictions, it's probably best practice to enable individual font features for ranges
 of an attributed string. Rather than turning on multiple features for the entire string.
 
-Examples:
+# Examples
 
-Swift
+## Swift
 
 `var theFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightRegular)`
 
@@ -44,7 +44,7 @@ or
 
 `theFont = theFont.withTraits(traits)`
 
-Objective-C
+## Objective-C
 
 `UIFont* theFont = [UIFont systemFontOfSize:14 weight:UIFontWeightRegular];`
 
