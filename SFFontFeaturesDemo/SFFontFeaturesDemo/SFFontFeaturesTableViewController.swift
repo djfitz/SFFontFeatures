@@ -16,20 +16,13 @@ class SFFontFeaturesTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 50
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 12
     }
 
@@ -43,8 +36,7 @@ class SFFontFeaturesTableViewController: UITableViewController {
         // Reset any previous traits from reused cell
         cell.regularLabel.font  = UIFont.systemFont(ofSize: cell.regularLabel.font.pointSize,  weight: UIFontWeightRegular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
         cell.featuredLabel.font = UIFont.systemFont(ofSize: cell.featuredLabel.font.pointSize, weight: UIFontWeightRegular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
-//
-//        cell.featuredLabel.font
+
         // Show one font feature for each row
 
         switch indexPath.row {
