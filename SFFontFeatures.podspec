@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name     = 'SanFranciscoFontFeatures'
+  s.name     = 'SFFontFeatures'
   s.version  = '1.0.0'
   s.platform = :ios, "8.2"
   s.license  = 'MIT'
