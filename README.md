@@ -4,6 +4,8 @@ A convenience extension to UIFont for enabling features specific to the San Fran
 
 # Cocoapods usage
 
+Add this line to your podfile:
+
 `pod 'SFFontFeatures'`
 
 # San Francisco Font Information
