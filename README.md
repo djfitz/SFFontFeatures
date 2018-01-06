@@ -39,7 +39,7 @@ which aren't named in the SDK headers. This class extension abstracts the specif
 Due to the above limitations/restrictions, it's probably best practice to enable individual font features for ranges
 of an attributed string. Rather than turning on multiple features for the entire string.
 
-# Examples
+# Using SFFontFeatures In Your Code
 
 ## Swift
 
