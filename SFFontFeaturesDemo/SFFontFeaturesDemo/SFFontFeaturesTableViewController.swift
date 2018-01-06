@@ -33,7 +33,9 @@ class SFFontFeaturesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeatureTableViewCell.cellID, for: indexPath) as! FeatureTableViewCell
 
-        // Reset any previous traits from reused cell
+        // Reset any previous default traits from the reused cell.
+        // Contextual alternatives encapsulate a number of font features, often dependent on the character string, so turn this feature
+        // off so it doesn't affect the results in the table.
         cell.regularLabel.font  = UIFont.systemFont(ofSize: cell.regularLabel.font.pointSize,  weight: UIFontWeightRegular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
         cell.featuredLabel.font = UIFont.systemFont(ofSize: cell.featuredLabel.font.pointSize, weight: UIFontWeightRegular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
 
