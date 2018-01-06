@@ -68,6 +68,8 @@ or
 Finally, feel free to ask Apple to add to their SDKs interfaces to more easily enable these SF font features (e.g. UIKit).
 Particularly, to document the Stylistic Alternatives.
 
+# Features Summary
+
 Here is a list of features that I support:
 
 * Straight-sided six and nine
