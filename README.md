@@ -1,6 +1,9 @@
 # SFFontFeatures
 
-A convenience extension to UIFont for enabling features specific to the San Francisco font.
+A convenience extension to UIFont for enabling features specific to the San Francisco font. 
+
+Many of the features of the San Francisco font are enabled by odd OpenType settings (e.g. Alternate Stylistic Features)
+which aren't named in the SDK headers. This class extension abstracts the specifics to enable these features.
 
 # Cocoapods usage
 
@@ -17,9 +20,6 @@ https://developer.apple.com/fonts/
 ![](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.png)
 
 # NOTES
-
-Many of the features of the San Francisco font are enabled by odd OpenType settings (e.g. Alternate Stylistic Features)
-which aren't named in the SDK headers. This class extension abstracts the specifics to enable these features.
 
 	NOTE 1: Some of these features are mutually exclusive. e.g. Monospaced Numbers and Proportional numbers.
 	They are both in the feature list because sometimes you need to turn off default behavior. However,
