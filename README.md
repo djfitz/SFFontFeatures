@@ -17,7 +17,7 @@ See here for more info about the San Francisco Font:
 https://developer.apple.com/fonts/
 
 
-![](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.png)
+![](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.pdf)
 
 # Using SFFontFeatures In Your Code
 
