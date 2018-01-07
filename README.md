@@ -26,18 +26,15 @@ https://developer.apple.com/fonts/
 	mixing these two settings On in the same font will probably be undefined. Be careful when using multiple
 	simultaneous features!
 
-	NOTE 2: Some features require specific character run requirements. For example, fractional form requires the
-	character run that is applied this font to be <digits>/<digits>. If the feature doesn't seem to work,
-	check the character run.
+	NOTE 2: Some features are enabled by default but require specific character runs for them to be applied.
+	For example, without turning on the fractional form feature directly, it requires the character run that
+	is applied this font to be <digits>/<digits>. If the feature doesn't seem to work, check the
+	character run. Or turn on the feature explicitly.
 
 	NOTE 3: Some features are on by default for the SF font. If so, turning on a feature won't have any visible effect.
-	You can try experimenting turning features off to see how they affect the resultant output.
+	You can try experimenting turning features on and off to see how they affect the resultant output.
 
-	NOTE 4: If the feature which should be enabled by default doesn't enable due to the character stream requirements
-	not being met, you can try explicitly turning it on. See also SFFontFeatureVerticallyCenteredColon
-
-Due to the above limitations/restrictions, it's probably best practice to enable individual font features for ranges
-of an attributed string. Rather than turning on multiple features for the entire string.
+Due to the above limitations/restrictions, if you want to use multiple features in a single string,  it's probably best practice to enable individual font features for ranges of an attributed string. Rather than turning on multiple features for the entire string.
 
 # Using SFFontFeatures In Your Code
 
