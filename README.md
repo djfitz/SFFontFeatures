@@ -32,7 +32,7 @@ or
 
 `let traits = SFFontFeatureTraits()`
 
-`traits.highLegibility = TriState.on`
+`traits.highLegibility = .on`
 
 `theFont = theFont.withTraits(traits)`
 
