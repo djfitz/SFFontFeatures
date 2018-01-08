@@ -16,8 +16,12 @@ Add this line to your podfile:
 See here for more info about the San Francisco Font:
 https://developer.apple.com/fonts/
 
+<object data="https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.pdf" type="application/pdf">
+    <embed src="https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.pdf">
+        This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
-![Hirez PDF of Features](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.pdf)
 ![](https://github.com/djfitz/SFFontFeatures/blob/master/SanFranciscoFontFeatures.png)
 
 # Using SFFontFeatures In Your Code
