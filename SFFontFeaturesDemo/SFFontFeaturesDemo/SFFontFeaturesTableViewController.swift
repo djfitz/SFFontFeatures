@@ -36,8 +36,8 @@ class SFFontFeaturesTableViewController: UITableViewController {
         // Reset any previous default traits from the reused cell.
         // Contextual alternatives encapsulate a number of font features, often dependent on the character string, so turn this feature
         // off so it doesn't affect the results in the table.
-        cell.regularLabel.font  = UIFont.systemFont(ofSize: cell.regularLabel.font.pointSize,  weight: UIFontWeightRegular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
-        cell.featuredLabel.font = UIFont.systemFont(ofSize: cell.featuredLabel.font.pointSize, weight: UIFontWeightRegular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
+        cell.regularLabel.font  = UIFont.systemFont(ofSize: cell.regularLabel.font.pointSize,  weight: UIFont.Weight.regular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
+        cell.featuredLabel.font = UIFont.systemFont(ofSize: cell.featuredLabel.font.pointSize, weight: UIFont.Weight.regular).withTraits( SFFontFeatureTraits.withContextualAlternativeDisabled() )
 
         // Show one font feature for each row
 
