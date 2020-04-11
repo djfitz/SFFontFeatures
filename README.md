@@ -14,7 +14,7 @@ Add this line to your podfile:
 
 `pod 'SFFontFeatures'`
 
-# San Francisco Font Information
+# All the San Francisco Font Features
 
 See here for more info about the San Francisco Font:
 https://developer.apple.com/fonts/
