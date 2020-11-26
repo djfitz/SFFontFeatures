@@ -14,6 +14,8 @@
 		F659C0BD1DFA6ECB00A769AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659C0BB1DFA6ECB00A769AD /* LaunchScreen.storyboard */; };
 		F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */; };
 		F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */; };
+		F66C8D332570650D000EC163 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F66C8D322570650D000EC163 /* SFFontFeatures.m */; };
+		F6F21B6A25707E67007CA492 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F21B6925707E66007CA492 /* SFFontFeatures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureTableViewCell.swift; sourceTree = "<group>"; };
 		F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFontFeaturesTableViewController.swift; sourceTree = "<group>"; };
 		F659C0C81DFA750800A769AD /* SFFontFeaturesDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFFontFeaturesDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F6F21B6825707E66007CA492 /* SFFontFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFFontFeatures.h; path = ../../SFFontFeatures.h; sourceTree = "<group>"; };
+		F6F21B6925707E66007CA492 /* SFFontFeatures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFFontFeatures.m; path = ../../SFFontFeatures.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */,
 				F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */,
 				F659C0C81DFA750800A769AD /* SFFontFeaturesDemo-Bridging-Header.h */,
+				F6F21B6825707E66007CA492 /* SFFontFeatures.h */,
+				F6F21B6925707E66007CA492 /* SFFontFeatures.m */,
 			);
 			path = SFFontFeaturesDemo;
 			sourceTree = "<group>";
@@ -131,7 +137,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = doughill;
 				TargetAttributes = {
 					F659C0AE1DFA6ECB00A769AD = {
@@ -143,7 +149,7 @@
 			};
 			buildConfigurationList = F659C0AA1DFA6ECB00A769AD /* Build configuration list for PBXProject "SFFontFeaturesDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
@@ -223,6 +229,8 @@
 			files = (
 				F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */,
 				F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */,
+				F66C8D332570650D000EC163 /* SFFontFeatures.m in Sources */,
+				F659C0B51DFA6ECB00A769AD /* ViewController.swift in Sources */,
 				F659C0B31DFA6ECB00A769AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,20 +261,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -304,20 +321,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;

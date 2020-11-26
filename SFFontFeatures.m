@@ -227,7 +227,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     if( nextFeatureDict )
 		[retVal addObject:nextFeatureDict];
 
-	return retVal.copy;
+    return retVal.copy;     // return immutable version
 }
 
 // * fontWithFeatures
@@ -255,9 +255,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 }
 
 // * fontFeatureDictionaryForFeature
-+ (NSDictionary*) fontFeatureSpecDictionaryForFeature:(SFFontFeatureType)feature enabled:(BOOL)enabled
++ (NSDictionary*) fontFeatureSpecDictionaryForFeature:(SFFontFeatureType)feature enabled:(TriState)enabled
 {
-    return [UIFont fontFeatureSpecDictionaryForFeature:feature enabledT:enabled ? on : off];
+    return [UIFont fontFeatureSpecDictionaryForFeature:feature enabledT:enabled];
 }
 
 + (NSDictionary*) fontFeatureSpecDictionaryForFeature:(SFFontFeatureType)feature enabledT:(TriState)featureTristate

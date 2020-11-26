@@ -166,21 +166,21 @@ typedef NS_ENUM(NSUInteger, TriState)
 @property TriState inferiorPositions;
 @property TriState contextualAlternatives;
 
-+ (SFFontFeatureTraits*) traitsWithStraightSidedSixAndNineEnabled;
-+ (SFFontFeatureTraits*) traitsWithOpenFourEnabled;
-+ (SFFontFeatureTraits*) traitsWithHighLegibilityEnabled;
-+ (SFFontFeatureTraits*) traitsWithVerticallyCenteredColonEnabled;
-+ (SFFontFeatureTraits*) traitsWithOneStoryAEnabled;
-+ (SFFontFeatureTraits*) traitsWithUpperCaseSmallCapitalsEnabled;
-+ (SFFontFeatureTraits*) traitsWithLowerCaseSmallCapitalsEnabled;
-+ (SFFontFeatureTraits*) traitsWithContextualFractionalFormsEnabled;
-+ (SFFontFeatureTraits*) traitsWithMonospacedNumbersEnabled;
-+ (SFFontFeatureTraits*) traitsWithProportionallySpacedNumbersEnabled;
-+ (SFFontFeatureTraits*) traitsWithSuperiorPositionsEnabled;
-+ (SFFontFeatureTraits*) traitsWithInferiorPositionsEnabled;
-+ (SFFontFeatureTraits*) traitsWithContextualAlternativeEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithStraightSidedSixAndNineEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithOpenFourEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithHighLegibilityEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithVerticallyCenteredColonEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithOneStoryAEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithUpperCaseSmallCapitalsEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithLowerCaseSmallCapitalsEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithContextualFractionalFormsEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithMonospacedNumbersEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithProportionallySpacedNumbersEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithSuperiorPositionsEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithInferiorPositionsEnabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithContextualAlternativeEnabled;
 
-+ (SFFontFeatureTraits*) traitsWithContextualAlternativeDisabled;
++ (SFFontFeatureTraits* _Nonnull) traitsWithContextualAlternativeDisabled;
 
 @end
 
@@ -246,7 +246,7 @@ typedef NS_ENUM(NSUInteger, TriState)
 
         UIFont *sfFont = [sfFont fontWithTraits:traits];
 */
-- (UIFont*) fontWithFeatures:(NSDictionary*)features;
+- (UIFont* _Nonnull) fontWithFeatures:(NSDictionary* _Nonnull)features;
 
 /*!
 	Creates a new font object by adding SF font features to the reciever font.
@@ -284,11 +284,11 @@ or
 
 	@return	A new font that is based on this font that has the specified features.
 */
-- (UIFont*) fontWithTraits:(SFFontFeatureTraits*) traits;
+- (UIFont* _Nonnull) fontWithTraits:(SFFontFeatureTraits* _Nonnull) traits;
 
 /*!
 	Conveniance method that creates a new font and adds the features to it.
 */
-+ (instancetype) systemFontOfSize:(CGFloat)pointSize weight:(CGFloat)weight features:(NSDictionary*)features;
++ (instancetype _Nonnull) systemFontOfSize:(CGFloat)pointSize weight:(CGFloat)weight features:(NSDictionary* _Nonnull )features;
 
 @end
