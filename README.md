@@ -1,3 +1,6 @@
+## Update 11-27-2020
+Everything is building with at least iOS 13 now. I hope you're enjoying using SF font features. Let me know if you have any feedback, bugs, requests, etc.
+
 # SFFontFeatures
 
 A convenience extension to UIFont for enabling features specific to the San Francisco font. 
