@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CA18803394BFDF766D6E13C /* Pods_SFFontFeaturesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F22E4A2D3882A16A776577 /* Pods_SFFontFeaturesDemo.framework */; };
+		F629A7F025712A1E005B63E3 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F21B6925707E66007CA492 /* SFFontFeatures.m */; };
 		F659C0B31DFA6ECB00A769AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0B21DFA6ECB00A769AD /* AppDelegate.swift */; };
 		F659C0B81DFA6ECB00A769AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659C0B61DFA6ECB00A769AD /* Main.storyboard */; };
 		F659C0BA1DFA6ECB00A769AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F659C0B91DFA6ECB00A769AD /* Assets.xcassets */; };
 		F659C0BD1DFA6ECB00A769AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659C0BB1DFA6ECB00A769AD /* LaunchScreen.storyboard */; };
 		F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */; };
 		F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */; };
-\		F69CC7932570823D007B1AD3 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F21B6925707E66007CA492 /* SFFontFeatures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B20A4946A2A7808EDF60DC9 /* Pods-SFFontFeaturesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFFontFeaturesDemo.release.xcconfig"; path = "Target Support Files/Pods-SFFontFeaturesDemo/Pods-SFFontFeaturesDemo.release.xcconfig"; sourceTree = "<group>"; };
-		A5F22E4A2D3882A16A776577 /* Pods_SFFontFeaturesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFFontFeaturesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAEE80DD65FA7BAA0133FBC6 /* Pods-SFFontFeaturesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFFontFeaturesDemo.debug.xcconfig"; path = "Target Support Files/Pods-SFFontFeaturesDemo/Pods-SFFontFeaturesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F659C0AF1DFA6ECB00A769AD /* SFFontFeaturesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFFontFeaturesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F659C0B21DFA6ECB00A769AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F659C0B71DFA6ECB00A769AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,38 +35,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA18803394BFDF766D6E13C /* Pods_SFFontFeaturesDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AFFD346DA387D429BF1BE14 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				DAEE80DD65FA7BAA0133FBC6 /* Pods-SFFontFeaturesDemo.debug.xcconfig */,
-				3B20A4946A2A7808EDF60DC9 /* Pods-SFFontFeaturesDemo.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		5658E46AD72D5E93AF59F592 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A5F22E4A2D3882A16A776577 /* Pods_SFFontFeaturesDemo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F659C0A61DFA6ECB00A769AD = {
 			isa = PBXGroup;
 			children = (
 				F659C0B11DFA6ECB00A769AD /* SFFontFeaturesDemo */,
 				F6EDF8FE1E04AACB00664756 /* Supporting Files */,
 				F659C0B01DFA6ECB00A769AD /* Products */,
-				0AFFD346DA387D429BF1BE14 /* Pods */,
-				5658E46AD72D5E93AF59F592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,11 +90,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F659C0C11DFA6ECB00A769AD /* Build configuration list for PBXNativeTarget "SFFontFeaturesDemo" */;
 			buildPhases = (
-				119FE6F904F138CB3B9F7B55 /* [CP] Check Pods Manifest.lock */,
 				F659C0AB1DFA6ECB00A769AD /* Sources */,
 				F659C0AC1DFA6ECB00A769AD /* Frameworks */,
 				F659C0AD1DFA6ECB00A769AD /* Resources */,
-				8029577B6CA38D015884E90F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,49 +152,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		119FE6F904F138CB3B9F7B55 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SFFontFeaturesDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8029577B6CA38D015884E90F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SFFontFeaturesDemo/Pods-SFFontFeaturesDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SFFontFeatures/SFFontFeatures.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SFFontFeatures.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SFFontFeaturesDemo/Pods-SFFontFeaturesDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F659C0AB1DFA6ECB00A769AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -228,8 +159,7 @@
 			files = (
 				F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */,
 				F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */,
-				F69CC7932570823D007B1AD3 /* SFFontFeatures.m in Sources */,
-				F659C0B51DFA6ECB00A769AD /* ViewController.swift in Sources */,
+				F629A7F025712A1E005B63E3 /* SFFontFeatures.m in Sources */,
 				F659C0B31DFA6ECB00A769AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,7 +301,6 @@
 		};
 		F659C0C21DFA6ECB00A769AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAEE80DD65FA7BAA0133FBC6 /* Pods-SFFontFeaturesDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -387,7 +316,6 @@
 		};
 		F659C0C31DFA6ECB00A769AD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B20A4946A2A7808EDF60DC9 /* Pods-SFFontFeaturesDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
