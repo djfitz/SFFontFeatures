@@ -23,7 +23,7 @@ class SFFontFeaturesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 11
     }
 
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -99,26 +99,34 @@ class SFFontFeaturesTableViewController: UITableViewController {
                 cell.featuredLabel.font = cell.featuredLabel.font.withTraits( SFFontFeatureTraits.withContextualFractionalFormsEnabled() )
 
             case 8:
-                cell.descLabel.text     = "Monospaced Numbers"
+                cell.descLabel.text     = "Monospaced vs. Proportional Numbers"
+                cell.regularHeaderLabel.text = "  Proportional Numbers"
                 cell.regularLabel.text  = "0123456789"
                 cell.regularLabel.font = cell.featuredLabel.font.withTraits( SFFontFeatureTraits.withProportionallySpacedNumbersEnabled() )
+                cell.featuredHeaderLabel.text = "Monospaced Numbers"
                 cell.featuredLabel.text = "0123456789"
                 cell.featuredLabel.font = cell.featuredLabel.font.withTraits( SFFontFeatureTraits.withMonospacedNumbersEnabled() )
 
+
             case 9:
-                cell.descLabel.text     = "Proportionally Spaced Numbers"
-                cell.regularLabel.text  = "0123456789"
-                cell.regularLabel.font = cell.regularLabel.font.withTraits( SFFontFeatureTraits.withMonospacedNumbersEnabled() )
-                cell.featuredLabel.text = "0123456789"
-                cell.featuredLabel.font = cell.featuredLabel.font.withTraits( SFFontFeatureTraits.withProportionallySpacedNumbersEnabled() )
+                cell.descLabel.text     = "Superior Positions (Superscript)"
+                cell.regularLabel.text = "See alsoibid"
+
+                let pref = NSMutableAttributedString(string: "See also")
+
+                pref.append(
+                    NSMutableAttributedString(
+                        string: "ibid",
+                        attributes:
+                        [
+                            .font :
+                            cell.regularLabel.font?.withTraits(
+                                SFFontFeatureTraits.withSuperiorPositionsEnabled()) as Any
+                        ] ))
+
+                cell.featuredLabel.attributedText = pref
 
             case 10:
-                cell.descLabel.text     = "Superior Positions (Superscript)"
-                cell.regularLabel.text  = "C1H2O3S"
-                cell.featuredLabel.text = "C1H2O3S"
-                cell.featuredLabel.font = cell.featuredLabel.font.withTraits( SFFontFeatureTraits.withSuperiorPositionsEnabled() )
-
-            case 11:
                 cell.descLabel.text     = "Inferior Positions (Subscript)"
                 cell.regularLabel.text  = "C1H2O3S"
                 cell.featuredLabel.text = "C1H2O3S"

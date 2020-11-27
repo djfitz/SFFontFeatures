@@ -36,7 +36,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="990" verticalCompressionResistancePriority="990" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KQ9-cS-ewy">
                                                     <rect key="frame" x="0.0" y="24.333333333333336" width="118.33333333333333" height="28.666666666666664"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="266" verticalCompressionResistancePriority="766" text="Regular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-Pb-15o" userLabel="Regular Heading">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="266" verticalCompressionResistancePriority="766" text="Regular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-Pb-15o" userLabel="Regular Heading">
                                                             <rect key="frame" x="0.0" y="0.0" width="56.333333333333336" height="28.666666666666668"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
@@ -55,7 +55,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="SeK-0X-YKK">
                                                     <rect key="frame" x="0.0" y="57" width="119.33333333333333" height="31"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Feature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-Vm-Lep" userLabel="Feature Heading">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Feature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLz-Vm-Lep" userLabel="Feature Heading">
                                                             <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="31"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
@@ -83,7 +83,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descLabel" destination="UW6-i4-Mfe" id="JmN-BM-sBV"/>
+                                    <outlet property="featuredHeaderLabel" destination="DLz-Vm-Lep" id="uKR-Pf-upC"/>
                                     <outlet property="featuredLabel" destination="FPb-cO-3Mv" id="hwy-TK-FNI"/>
+                                    <outlet property="regularHeaderLabel" destination="kPI-Pb-15o" id="FfQ-he-DtM"/>
                                     <outlet property="regularLabel" destination="gt4-Pa-hBk" id="vcI-zO-PP1"/>
                                 </connections>
                             </tableViewCell>

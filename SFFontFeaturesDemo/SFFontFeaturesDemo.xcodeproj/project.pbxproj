@@ -14,8 +14,7 @@
 		F659C0BD1DFA6ECB00A769AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F659C0BB1DFA6ECB00A769AD /* LaunchScreen.storyboard */; };
 		F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C41DFA6FE300A769AD /* FeatureTableViewCell.swift */; };
 		F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F659C0C61DFA74B200A769AD /* SFFontFeaturesTableViewController.swift */; };
-		F66C8D332570650D000EC163 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F66C8D322570650D000EC163 /* SFFontFeatures.m */; };
-		F6F21B6A25707E67007CA492 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F21B6925707E66007CA492 /* SFFontFeatures.m */; };
+\		F69CC7932570823D007B1AD3 /* SFFontFeatures.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F21B6925707E66007CA492 /* SFFontFeatures.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,7 +228,7 @@
 			files = (
 				F659C0C71DFA74B200A769AD /* SFFontFeaturesTableViewController.swift in Sources */,
 				F659C0C51DFA6FE300A769AD /* FeatureTableViewCell.swift in Sources */,
-				F66C8D332570650D000EC163 /* SFFontFeatures.m in Sources */,
+				F69CC7932570823D007B1AD3 /* SFFontFeatures.m in Sources */,
 				F659C0B51DFA6ECB00A769AD /* ViewController.swift in Sources */,
 				F659C0B31DFA6ECB00A769AD /* AppDelegate.swift in Sources */,
 			);

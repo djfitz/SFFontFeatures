@@ -15,7 +15,9 @@ class FeatureTableViewCell: UITableViewCell {
     @IBOutlet var descLabel: UILabel!
     @IBOutlet var regularLabel: UILabel!
     @IBOutlet var featuredLabel: UILabel!
-
+    @IBOutlet weak var regularHeaderLabel: UILabel!
+    @IBOutlet weak var featuredHeaderLabel: UILabel!
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
