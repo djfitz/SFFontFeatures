@@ -1,5 +1,5 @@
 ## Update 11-27-2020
-Everything is building with at least iOS 13 now. I hope you're enjoying using SF font features. Let me know if you have any feedback, bugs, requests, etc.
+Everything is building with at least iOS 13 now. I hope you're enjoying using SF font features. Let me know if you have any [feedback, bugs, requests, etc.](https://github.com/djfitz/SFFontFeatures/issues)
 
 # SFFontFeatures
 
