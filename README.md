@@ -48,7 +48,7 @@ or
 
 `theFont = [theFont fontWithTraits:[SFFontFeatureTraits traitsWithHighLegibilityEnabled]];`
 
-`SFFontFeatureTraits* traits;`
+`SFFontFeatureTraits* traits = [[SFFontFeatureTraits alloc] init];`
 
 `traits.straightSidedSixAndNine = on;`
 
